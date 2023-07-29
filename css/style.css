@@ -1,0 +1,84 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.color1{
+    color: #0078FF;
+}
+
+.font-size-8px{
+    font-size: 8px;
+} 
+
+.font-size-40px{
+    font-size: 40px;
+} 
+
+.font-size-72px{
+    font-size: 72px;
+}
+
+.bk{
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content{
+background-color: rgb(255, 255, 255);
+width: 50%;
+height: 90%;
+box-shadow: 0px 0px 20px 0px  rgb(128, 126, 126);
+
+}
+
+.imgbk{
+/* height: 50%; */
+/* width:100% ; */
+background-image: url(../img/Untitled3.png); 
+background-size: cover;
+     background-position: center center;
+}
+
+
+button{
+    /* background-image: linear-gradient(90deg, rgb(0, 240, 255),rgb(75, 167, 244),rgb(99, 141, 239),rgb(147, 93, 233));
+    background-image: linear-gradient(90deg,rgb(142, 80, 213),rgb(114, 56, 168),rgb(59, 31, 118)); */
+}
+
+
+.arrowdown{
+    width: 40px;
+    height:40px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 45%;
+    left: 45%;
+}
+
+.icon{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.rubik{
+    font-family:rubik ;
+}
+
+@font-face {
+    font-family: rubik;
+    src: url(../webfonts/Rubik-Regular.ttf);
+}

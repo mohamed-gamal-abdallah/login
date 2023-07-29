@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+ 
+    <div class="bk py-5 bg-light">
+      <div class="content position-relative row ">
+        <div class="position-absolute arrowdown"><i class="fa-solid fa-chevron-right fs-5"></i></div>
+        <div class="imgbk col-md-6  p-0 d-flex align-items-center justify-content-center flex-column">
+          <p class="text-white m-0">Nice to see you again</p>
+          <h2 class="text-white fw-bold rubik">Welcome Back</h2>
+          <div class="icon"></div>
+          
+          
+        </div>
+        <div class="login-form text-center d-flex align-items-center flex-column col-md-6 justify-content-center">
+          <h5 class=" mt-4 text-primary fw-bold mb-5">Login Account</h5>
+
+
+          <div class="input-group flex-nowrap input-group-sm w-75 my-2 ">
+            <span class="input-group-text " id="addon-wrapping"><i class="fa-regular fa-user "></i></span>
+            <input type="text" class="form-control" placeholder="EMAIL" aria-label="Username" id="EMAIL"
+              aria-describedby="addon-wrapping">
+          </div>
+
+
+          <div class="input-group flex-nowrap input-group-sm w-75 rounded-5">
+            <span class="input-group-text " id="addon-wrapping"><i class="fa-solid fa-lock  "></i></span>
+            <input type="password" class="form-control " placeholder="PASSWORD"  id="PASSWORD"
+              aria-describedby="addon-wrapping">
+          </div>
+
+
+          <button type="button" id="login" class="btn my-2 px-5 btn-sm btn-primary rounded-5">LOGIN</button>
+
+          <div class=" w-100 d-flex justify-content-between align-items-center px-3">
+            <h6 class=" font-size-8px mt-2"> Please sign up if haven't account</h6>
+           <a href="signup.html">signup</a> 
+          </div>
+          <h6 class="text-danger" id="errorshow"></h6>
+        </div>
+      </div>
+
+
+      <div  id="massageshowcontiner"class="d-none text-center" >
+        <h2 id="massageshow" class=""></h2>
+        <button type="button" id="logout" class="btn btn-sm bg-primary">log out</button>
+      </div>
+    </div>
+    
+
+  
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/indexsignup.js"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
