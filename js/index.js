@@ -25,6 +25,9 @@ login.addEventListener("click",function(){
             document.getElementById("massageshowcontiner").classList.remove("d-none")
             document.getElementById("massageshow").innerHTML=` welcome ${database[i].name}`
             document.getElementById("errorshow").innerHTML=''
+            EMAIL.value=""
+            password.value=""
+
         }else if(EMAIL.value==database[i].email && password.value!==database[i].password){
             document.getElementById("errorshow").innerHTML=`wrong password`
         }

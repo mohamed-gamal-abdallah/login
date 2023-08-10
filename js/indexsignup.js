@@ -33,7 +33,6 @@ function add(){
     usernamesignup.value=""
     emailsignup.value=""
     passwordsignup.value=""
-    // window.location='./index.html'
     messagevaild.innerHTML=""
 }
 
@@ -47,88 +46,50 @@ function vaild(){
 }
 
 
+var matchname=false
 
 function match(){
 if(database.length===0){
-    console.log("kkkkkkkkkkkkkkkkk6666k")
-    return false
-}else if(database.length!==0){
+    matchname=false
+
+}else {
     for(var i=0;i<database.length;i++){
-        console.log(i)
         if(database[i].email===emailsignup.value ){
-            return false
+            matchname=true
             
-        }else {
-            return true
-        }
-    }
-}
-    }
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-signup.addEventListener("click",function(){
-    
-    // vaild()
-    // console.log(vaild())
-    // console.log(match())
-    // console.log(typeof vaild.value)
-    // console.log(typeof match())
-    
-        if(vaild()===true && match()===true){
-            add()
-            database = JSON.parse(localStorage.getItem("users"));
-            console.log(database)
-        }else if(vaild()===false){
-            messagevaild.innerHTML="the email you enterd is not vaild try (ex:m@yahoo.com)"
-            console.log("kkkkkkkkkkkkkkkkkk")
-        }else if(vaild()===true && match()===false){
-            messagevaild.innerHTML="the email you enter is excited"
-            console.log("hhhhhhhhhh")
         }
 
+    }
         
     }
-)
-
-
-
-
-
-
-
-// {
-//     name:"mohamed",
-//         email:"m@yahoo.com",
-//         password:123
-// },{
-//     name:"ahmed",
-//         email:"m1@yahoo.com",
-//         password:123
-// }
-
-
-// for(var i=0;i<database.length;i++){
-//     console.log(database[i].email)
+}
     
 
-// }
+
+    
+
+signup.addEventListener("click",function(){
+    match()
+    vaild()
+        if(vaild()===true && matchname===false){
+            add()
+            database = JSON.parse(localStorage.getItem("users"));
+            messagevaild.innerHTML="success"
+            messagevaild.classList.remove("text-danger")
+            messagevaild.classList.add("text-success")
+
+        }else if(vaild()===false){
+            messagevaild.innerHTML="the email you enterd is not vaild try (ex:m@yahoo.com)"
+            messagevaild.classList.remove("text-success")
+            messagevaild.classList.add("text-danger")
+            console.log("hiuhih")
+        }else if(vaild()===true && matchname===true){
+            messagevaild.innerHTML="the email you enter is excited"
+            messagevaild.classList.remove("text-success")
+            messagevaild.classList.add("text-danger")
+            matchname=false
+
+            
+        }        
+    }
+)
